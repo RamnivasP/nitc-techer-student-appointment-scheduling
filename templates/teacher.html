@@ -1,0 +1,161 @@
+{% extends 'student_base.html' %}
+
+{% block content %}
+    
+    <div class="sidenav">
+        <div class="profile">
+            <img src="/static/images/NITC_logo.jpg" alt="" width="100" height="auto">
+
+            <div class="name">
+                NIT Calicut
+            </div>
+            <div class="job">
+                Faculty
+            </div>
+        </div>
+
+        <div class="sidenav-url">
+            <div class="url">
+                <a href="#profile" class="active">Profile</a>
+                <hr align="center">
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- End -->
+    
+    <!-- Main -->
+    
+       
+        <div class="main">
+        <form method="post" id="form1">
+            <div class="card">
+                <div class="card-body">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><b>Name :</b></td>
+                                <td>Sumesh TA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Email :</b></td>
+                                <td>sumesh@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Specializations :</b></td>
+                                <td>OS,DBMS,Hardware,CN</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+        </div>
+        <!-- End -->
+        <h3 class="title">Schedule</h3>
+        <br><br><br>
+        
+        <div class="app-time">
+            <div>
+                <label style="text-align: center;" for="sel1" class="form-label">Select a day:</label>
+                <br>
+                <select style="width: 2.8cm; height:0.6cm;" class="form-select" id="sel1" name="sellist1">
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                </select>
+                <br><br>
+            </div>
+            <div></div>
+            <div class="today">
+                <p><b>Timings (9:00 AM to 12:00 PM)</b></p>
+        
+                <div class="app-check">
+                    <input type="radio" class="option-input radio" name="example" />
+                    <div class="app-border">
+        
+                        <label class="app-label">8:00 AM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" disabled name="example" />
+                    <div class="app-border">
+        
+                        <label class="app-label">9:00 AM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" name="example" disabled />
+                    <div class="app-border">
+        
+                        <label class="app-label">10:00 AM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" name="example" />
+                    <div class="app-border">
+        
+                        <label class="app-label">11:00 AM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" name="example" />
+                    <div class="app-border">
+        
+                        <label class="app-label">12:00 AM
+                        </label>
+                    </div>
+        
+                </div>
+            </div>
+            <br>
+            <div>
+                <p><b>Timings (1:00 PM to 5:00 PM)</b></p>
+        
+                <div class="app-check">
+                    <input type="radio" class="option-input radio" name="example" />
+                    <div class="app-border">
+        
+                        <label class="app-label">1:00 PM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" name="example" disabled />
+                    <div class="app-border">
+        
+                        <label class="app-label">2:00 PM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" name="example" />
+                    <div class="app-border">
+        
+                        <label class="app-label">3:00 PM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" name="example" disabled />
+                    <div class="app-border">
+        
+                        <label class="app-label">4:00 PM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" name="example" />
+                    <div class="app-border">
+        
+                        <label class="app-label">5:00 PM
+                        </label>
+                    </div>
+                </div>
+            </div>
+            </form>
+            <br>
+                <button style="align-content: center; left:10cm;" class="sub-butt" type="submit" form="form1" value="Submit">Submit</button>
+        </div>
+{% endblock %}

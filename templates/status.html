@@ -1,0 +1,45 @@
+{%extends 'student_base.html'%}
+{%block content%}
+         <h2 align="center"><b>Status Page</b></h2>
+         <h3 align="center"> Your appointment status</h3>
+         <br>
+         <div class="container" align="center">
+            <table class="table table-striped" style="width:50% !important">
+                    <tr>
+                        <th>Teacher</th>
+                        <th>Day</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                        <th>Cancel?</th>
+                    </tr>
+                    <tr>
+                        <td>vinod p</td>
+                        <td>Monday</td>
+                        <td>3 pm</td>
+                        <td>confirmed</td>
+                        <td><input type="submit" value="cancel"></td>
+                     </tr>
+                    <tr>
+                        <td>murali krishna</td>
+                        <td>tuesday</td>
+                        <td>9 am</td>
+                        <td>waiting</td>
+                        <td><input type="submit" value="cancel"></td>
+                     </tr>
+                    <tr>
+                        <td>park</td>
+                        <td>wednesday</td>
+                        <td>2 pm</td>
+                        <td>confirmed</td>
+                        <td><input type="submit" value="cancel"></td>
+                     </tr>
+                    <tr>
+                        <td>sai</td>
+                        <td>friday</td>
+                        <td>11am</td>
+                        <td>waiting</td>
+                        <td><input type="submit" value="cancel"></td>
+                     </tr>
+             </table>
+         </div>
+{%endblock%}

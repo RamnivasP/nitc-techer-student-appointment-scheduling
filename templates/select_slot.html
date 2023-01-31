@@ -1,0 +1,144 @@
+{% extends 'faculty_base.html' %}
+
+{% block ap_link %}
+    <a href="{{url_for('faculty',user_name=data['user_name'])}}"><h1><b>FACULTY PAGE</b></h1></a>
+{% endblock %}
+
+{% block sel_slot %}
+    <a href="{{url_for('select_slot',user_name=data['user_name'])}}"><h1><b>Appointments</b></h1></a>
+{% endblock %}
+
+{% block can_slot %}
+    <a href="{{url_for('cancel_slot',user_name=data['user_name'])}}"><h1><b>Cancel slot</b></h1></a>
+{% endblock %}
+
+{% block content %}
+    
+    <div class="sidenav">
+        <div class="profile">
+            <img src="/static/images/NITC_logo.jpg" alt="" width="100" height="auto">
+
+            <div class="name">
+                NIT Calicut
+            </div>
+            <div class="job">
+                Faculty
+            </div>
+        </div>
+
+        <div class="sidenav-url">
+            <div class="url">
+                <a href="#profile" class="active">Profile</a>
+                <hr align="center">
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- End -->
+    
+    <!-- Main -->
+    
+       
+        <form method="post" id="form1">
+                    <div class="container" align="center">
+                        <img  class="card-img-top" src="/static/images/avatar.png" alt="Card image">
+                        <h2><b>{{data["name"]}}</b></h2>
+                        <h5>{{data["email"]}}</h5>
+                        <h5>{{data["dept"]}}</h5>
+                    </div>        
+        <!-- End -->
+        <h3 class="title">Schedule</h3>
+        <br><br><br>
+        
+        <div class="app-time">
+            <div>
+                <label style="text-align: center;" for="sel1" class="form-label">Select a day:</label>
+                <br>
+                <select style="width: 2.8cm; height:0.6cm;" class="form-select" id="sel1" name="day">
+                    {% for day1,day2 in {"mon":"Monday","tue":"Tuesday","wed":"Wednesday","thu":"Thursday","fri":"Friday"}.items() %}
+                        <option value={{day1}}>{{day2}}</option>
+                    {% endfor %}
+                </select>
+                <br><br>
+            </div>
+            <div></div>
+            <div class="today">
+                <p><b>Timings (9:00 AM to 12:00 PM)</b></p>
+        
+                <div class="app-check">
+                    <input type="radio" class="option-input radio" name="8" />
+                    <div class="app-border">
+        
+                        <label class="app-label">8:00 AM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" name="9" />
+                    <div class="app-border">
+        
+                        <label class="app-label">9:00 AM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" name="10"/>
+                    <div class="app-border">
+        
+                        <label class="app-label">10:00 AM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" name="11" />
+                    <div class="app-border">
+        
+                        <label class="app-label">11:00 AM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" name="12" />
+                    <div class="app-border">
+        
+                        <label class="app-label">12:00 AM
+                        </label>
+                    </div>
+        
+                </div>
+            </div>
+            <br>
+            <div>
+                <p><b>Timings (1:00 PM to 5:00 PM)</b></p>
+        
+                <div class="app-check">
+                    <input type="radio" class="option-input radio" name="1" />
+                    <div class="app-border">
+        
+                        <label class="app-label">1:00 PM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" name="2"/>
+                    <div class="app-border">
+        
+                        <label class="app-label">2:00 PM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" name="3" />
+                    <div class="app-border">
+        
+                        <label class="app-label">3:00 PM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" name="4"/>
+                    <div class="app-border">
+        
+                        <label class="app-label">4:00 PM
+                        </label>
+                    </div>
+                    <input type="radio" class="option-input radio" name="5" />
+                    <div class="app-border">
+        
+                        <label class="app-label">5:00 PM
+                        </label>
+                    </div>
+                </div>
+            </div>
+            </form>
+            <br>
+                <button style="align-content: center; left:10cm;" class="sub-butt" type="submit" form="form1" value="Submit">Submit</button>
+        </div>
+{% endblock %}

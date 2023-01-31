@@ -1,0 +1,48 @@
+{% extends 'student_base.html' %}
+{% block content %}
+    <div class="container">
+        <h2 align="center">List of all Teachers</h2>
+        <br><br>
+        <table class="tch_table">
+            <tr>
+                <td class="tch_table_row" align="center">
+                    <div class="card" >
+                        <img  class="card-img-top" src="/static/images/avatar.png" alt="Card image" >
+                        <div class="card-body">
+                            <h6 class="card-title">Sumesh TA</h6>
+                            <a style="font-size: 10px;" href="{{url_for('teacher')}}" class="btn btn-primary stretched-link">See Profile</a>
+                        </div>
+                    </div>
+                </td>
+                
+                <td align="center">
+                    <div class="card" >
+                        <img  class="card-img-top" src="/static/images/avatar.png" alt="Card image" >
+                        <div class="card-body">
+                            <h6 class="card-title">vinod</h6>
+                            <a style="font-size: 10px;" href="{{url_for('teacher')}}" class="btn btn-primary stretched-link">See Profile</a>
+                        </div>
+                    </div>
+                </td>
+                <td align="center">
+                    <div class="card" >
+                        <img  class="card-img-top" src="/static/images/avatar.png" alt="Card image" >
+                        <div class="card-body">
+                            <h6 class="card-title">joe</h6>
+                            <a style="font-size: 10px;" href="{{url_for('teacher')}}" class="btn btn-primary stretched-link">See Profile</a>
+                        </div>
+                    </div>
+                </td>
+                <td align="center">
+                    <div class="card" >
+                        <img  class="card-img-top" src="/static/images/avatar.png" alt="Card image" >
+                        <div class="card-body">
+                            <h6 class="card-title">arun</h6>
+                            <a style="font-size: 10px;" href="{{url_for('teacher')}}" class="btn btn-primary stretched-link">See Profile</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
